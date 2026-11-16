@@ -4,16 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<jsp:include page="../include/title.jsp"/>
 </head>
 <body>
 	<h2>SIGN-UP FORM</h2>
 	
-	<a href="/firstpjt/">home</a>
-	&nbsp;&nbsp; | &nbsp;&nbsp;
-	<a href="/firstpjt/signup.mem">sign-up</a>
-	&nbsp;&nbsp; | &nbsp;&nbsp;
-	<a href="firstpjt/signin.mem">sign-in</a>
+	<jsp:include page="../include/nav.jsp"/>
 	
 	<br><br>
 	
