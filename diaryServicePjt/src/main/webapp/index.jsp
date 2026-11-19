@@ -11,8 +11,6 @@
 </head>
 <body>
 
-
-
 	<jsp:include page="./view/include/header.jsp" />
 
 	<jsp:include page="./view/include/nav.jsp" />

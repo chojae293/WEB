@@ -11,3 +11,25 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
+.basic_input{
+	width: 400px;
+	height: 50px;
+	padding: 10px 5px;
+	margin: 2px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	font-size: 1.2em;
+	outline: none;
+}
+
+.basic_button{
+	width: 400px;
+	padding: 10px 5px;
+	margin: 2px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	font-size: 1.2em;
+	outline: none;
+	cursor:pointer;
+}
