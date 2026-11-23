@@ -38,3 +38,37 @@ drop table tbl_member;
 select count(*) from tbl_member where memId = 'gildong';
 
 delete from tbl_member;
+
+SET GLOBAL auto_increment_increment = 3;
+
+select 
+	* 
+from 
+	tbl_member 
+where 
+	memId = 'gildong';
+
+create table tbl_diary(
+	diaryNo		 int  auto_increment,
+	diaryWord	 varchar(100) not null,
+	memId   	 varchar(20)   unique not null,
+	diaryRegDate timestamp default current_timestamp comment '회원등록일',
+	diaryModDate timestamp default current_timestamp on update current_timestamp comment '회원수정일',
+	primary key(diaryNo)
+) auto_increment = 10001;
+
+alter table tbl_diary 
+DROP INDEX memId;
+
+show tables;
+desc tbl_diary;
+select * from tbl_diary;
+
+-- table join
+select * from tbl_diary td
+join tbl_member tm
+on td.memId = tm.memId
+where memId = 'chanho';
+
+
+

@@ -10,7 +10,7 @@
 
 <%-- <script type="text/javascript" src="${pageContext.request.contextPath}./res/js/member/signup_form.js"></script> --%>
 
-<jsp:include page="../include/member/member.jsp"></jsp:include>
+<jsp:include page="../include/member/member.jsp" />
 
 </head>
 <body>
