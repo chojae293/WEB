@@ -40,6 +40,23 @@
 					</tr>
 				</thead>	
 				<tbody>		
+				
+				<c:forEach var="item" items="${mtDiaries}}">
+					<tr>
+						<td>${item.getDiaryNo}</td>
+						<td>${item.getDiaryWord}</td>
+						<td>${item.getDiaryRegDate}</td>
+						<td>${item.getDiaryModDate}</td>
+						<td>${item.getMemNo}</td>
+						<td>${item.getMemId}</td>
+						<td>${item.getMemPw}</td>
+						<td>${item.getMemMail}</td>
+						<td>${item.getMemPhone}</td>
+						<td>${item.getMemRegDate}</td>
+						<td>${item.getMemModDate}</td>
+					</tr>
+				</c:forEach>
+				
 			<%
 				List<DiaryDto> myDiaries = (List<DiaryDto>) request.getAttribute("myDiaries");
 				for (int i = 0; i < myDiaries.size(); i++) {
@@ -57,7 +74,8 @@
 					<td><%= myDiaries.get(i).getMemRegDate() %></td>
 					<td><%= myDiaries.get(i).getMemModDate() %></td>
 				</tr>
-				<%}
+				<%
+				}
 			%>
 			
 
