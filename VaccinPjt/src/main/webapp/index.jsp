@@ -4,11 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>VACCIN</title>
+<jsp:include page="./view/include/title.jsp" />
+
+<link href="./res/css/index.css"rel="stylesheet type="text/css">
+
 </head>
 <body>
 <header>
-<meta>
 <jsp:include page="./view/include/header.jsp" />
 </header>
 	
