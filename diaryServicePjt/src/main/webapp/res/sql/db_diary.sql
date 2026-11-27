@@ -77,16 +77,17 @@ create database db_vaccin;
 show databases;
 use db_vaccin;
 
--- 백신 타입 테이블 ----
+-- 백신 타입 테이블 ----		
 create table tbl_fv_type(
-fv_type_no				int auto_increment    	comment '백신번호',
-fv_type					varchar(1) 	not null  	comment '백신 타입',
-fv_type_manuf_country	varchar(20) not null	comment '백신 제조국',
-fv_type_manuf_date		varchar(20) not null	comment '백신 제조일',
-primary key(fv_type_no)
+	fv_type_no				int auto_increment    	comment '백신번호',
+	fv_type					varchar(1) 	not null  	comment '백신 타입',
+	fv_type_manuf_country	varchar(20) not null	comment '백신 제조국',
+	fv_type_manuf_date		varchar(20) not null	comment '백신 제조일',
+	primary key(fv_type_no)
 );
 select * from tbl_fv_type;
 desc tbl_fv_type;
+drop table tbl_fv_type;
 
 insert into tbl_fv_type(fv_type, fv_type_manuf_country, fv_type_manuf_date)
 values('A', '한국','2023-01-10');
@@ -113,6 +114,7 @@ create table tbl_fv_location(
 	fv_location_manager	varchar(20) not null comment '접종처 담당자',
 	primary key(fv_location_no)
 );
+
 select * from tbl_fv_location;
 desc tbl_fv_location;
 
@@ -180,6 +182,22 @@ create table tbl_admin(
 
 select * from tbl_admin;
 desc tbl_admin;
+
+select * from tbl_flu_vaccin_person fvp
+join tbl_social_number sn
+on fvp.ss_number = sn.ss_number
+join tbl_fv_location fl
+on fvp.fv_location_no = fl.fv_location_no
+join tbl_fv_type ft
+on fvp.fv_type = ft.fv_type 
+order by fvp.fvp_no asc;
+
+
+
+
+
+
+
 
 
 
